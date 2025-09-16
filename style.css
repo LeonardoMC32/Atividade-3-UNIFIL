@@ -1,0 +1,240 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e layout principal */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #f0f8ff 0%, #fafafa 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #f0f8ff;
+    color: #1a237e;
+    text-align: center;
+    padding: 32px 0 16px 0;
+    box-shadow: 0 2px 8px rgba(26,35,126,0.05);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #3949ab;
+}
+
+/* Navegação */
+nav {
+    background-color: #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 12px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #1a237e;
+    border-bottom: 2px solid #1a237e;
+}
+
+/* Conteúdo principal */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+    padding: 32px 16px 80px 16px;
+    flex: 1;
+    transition: opacity 0.3s;
+}
+
+main.fade {
+    opacity: 0.3;
+}
+
+/* Artigos de personagens */
+article {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 24px;
+    margin-bottom: 24px;
+    max-width: 350px;
+    flex: 1;
+    transition: transform 0.2s;
+}
+
+article:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 6px 24px rgba(26,35,126,0.10);
+}
+
+article h2 {
+    color: #1a237e;
+    margin-bottom: 12px;
+}
+
+figure {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+figure img {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(26,35,126,0.08);
+    width: 200px;
+    height: auto;
+}
+
+figcaption {
+    font-size: 0.95em;
+    color: #3949ab;
+    margin-top: 6px;
+}
+
+section {
+    margin-bottom: 16px;
+}
+
+section h3 {
+    color: #3949ab;
+    margin-bottom: 6px;
+}
+
+ul {
+    margin-left: 18px;
+    margin-bottom: 8px;
+}
+
+/* Botão Favoritar */
+#fav-btn {
+    background: #3949ab;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 12px;
+    transition: background 0.2s;
+}
+#fav-btn.favorito {
+    background: #1a237e;
+}
+#fav-btn:hover {
+    background: #1a237e;
+}
+
+/* Comentários */
+#coment-form {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+#coment-input {
+    flex: 1;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+#coment-list {
+    list-style: disc;
+    margin-left: 18px;
+    color: #333;
+}
+
+/* Aside */
+aside {
+    background: #f5f5dc;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 20px;
+    max-width: 250px;
+    font-size: 1em;
+    color: #555;
+    height: fit-content;
+}
+
+aside h3 {
+    color: #1a237e;
+    margin-bottom: 10px;
+}
+
+aside ul {
+    margin-left: 18px;
+}
+
+aside ul li a {
+    color: #3949ab;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+/* Rodapé */
+footer {
+    background: linear-gradient(90deg, #e0e0e0, #b0c4de);
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding: 24px 8px 60px 8px;
+    }
+    article, aside {
+        max-width: 100%;
+        margin-bottom: 18px;
+    }
+}
+/* ...existing code... */
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 32px 0;
+}
+
+figure img {
+    max-width: 100%;
+    width: 400px; /* Ajuste o tamanho conforme desejar */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+/* ...existing code... */
+.banner-img {
+    display: block;
+    margin: 32px auto 0 auto;
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(26,35,126,0.10);
+}
